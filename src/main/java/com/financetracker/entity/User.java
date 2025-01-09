@@ -1,4 +1,4 @@
-package com.financetracker.model;
+package com.financetracker.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

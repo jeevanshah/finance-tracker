@@ -49,28 +49,6 @@ public class SecurityConfig {
     }
 
     @Bean
-    public CorsFilter corsFilter() {
-        CorsConfiguration corsConfig = new CorsConfiguration();
-
-        // Allow credentials
-        corsConfig.setAllowCredentials(true);
-
-        // Use allowed origin patterns
-        corsConfig.addAllowedOriginPattern("http://localhost:*");  // Allow any port on localhost
-        corsConfig.addAllowedOriginPattern("https://*.yourfrontenddomain.com");
-
-        // Allow all headers and methods
-        corsConfig.addAllowedHeader("*");
-        corsConfig.addAllowedMethod("*");
-
-        // Register this configuration for all paths
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", corsConfig);
-
-        return new CorsFilter(source);
-    }
-
-    @Bean
     public UserDetailsService userDetailsService() {
         var user = User.withUsername("testuser")
                 .password(passwordEncoder().encode("password123"))

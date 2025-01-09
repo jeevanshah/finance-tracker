@@ -1,7 +1,7 @@
 package com.financetracker;
 
 
-import com.financetracker.model.User;
+import com.financetracker.entity.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import com.financetracker.repository.UserRepository;
