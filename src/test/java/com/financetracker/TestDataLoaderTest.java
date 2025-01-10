@@ -20,7 +20,7 @@ public class TestDataLoaderTest {
     @Test
     public void testLoadTestData() {
         // Check if the test user is present in the database
-        Optional<User> user = userRepository.findByEmail("test@example.com");
+        Optional<User> user = userRepository.findByUsername("test@example.com");
         assertThat(user).isPresent();
         assertThat(user.get().getEmail()).isEqualTo("test@example.com");
         assertThat(user.get().getPassword()).isEqualTo("password");

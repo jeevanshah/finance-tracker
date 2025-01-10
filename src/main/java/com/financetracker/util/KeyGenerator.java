@@ -1,4 +1,4 @@
-package com.financetracker.config;
+package com.financetracker.util;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
